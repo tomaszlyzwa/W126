@@ -2,22 +2,46 @@
 <html lang="pl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>W126 — Mercedes-Benz 280 SE</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>W126 · 280 SE z 1982 roku</title>
+<meta name="description" content="Prywatny blog o Mercedesie W126 280 SE z 1982 roku.">
+<meta name="theme-color" content="#4c6ea5">
 <style>
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif;background:#111;color:#eee;display:flex;min-height:100vh;align-items:center;justify-content:center}
-main{max-width:640px;padding:2rem}
-h1{font-weight:300;letter-spacing:.05em;margin:0 0 .5rem}
-p{color:#aaa}
-a{display:inline-block;margin-top:1.5rem;padding:.8rem 1.4rem;border:1px solid #888;color:#eee;text-decoration:none;letter-spacing:.05em}
-a:hover{background:#eee;color:#111}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{
+  min-height:100vh;min-height:100dvh;
+  background:#4c6ea5;
+  background:linear-gradient(180deg,#5277b2 0%,#4b6ca2 45%,#4a6aa0 75%,#4d70a8 100%);
+  color:#f2f4f7;font-family:Georgia,'Times New Roman',serif;
+  display:flex;flex-direction:column;align-items:center;overflow-x:hidden}
+header{width:min(78vw,760px,60vh);margin-top:clamp(40px,9vh,120px);text-align:center}
+header img{width:100%;height:auto;display:block}
+h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.intro{align-self:flex-end;margin:clamp(20px,4vh,48px) clamp(16px,4vw,64px) 0 16px;text-align:left;max-width:calc(100vw - 32px)}
+nav{margin-top:clamp(10px,1.8vh,18px);display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-start}
+nav a{color:#f2f4f7;text-decoration:none;font-size:clamp(15px,1.5vw,18px);letter-spacing:.02em;padding:0;border:0;border-bottom:1px solid transparent;transition:border-color .2s}
+nav a:hover,nav a:focus-visible{border-bottom-color:#f2f4f7;outline:none}
+nav a::after{content:' →'}
+.sub{margin:0;font-size:clamp(15px,1.5vw,18px);opacity:.9;letter-spacing:.02em}
+
+.car{margin-top:auto;width:min(96vw,1250px,105vh);padding-top:32px}
+.car img{width:100%;height:auto;display:block}
+footer{width:100%;text-align:center;font:12px/1.5 system-ui,-apple-system,'Segoe UI',sans-serif;color:rgba(242,244,247,.7);padding:14px 16px calc(16px + env(safe-area-inset-bottom))}
 </style>
 </head>
 <body>
-<main>
-<h1>W126</h1>
-<p>Mercedes-Benz 280 SE, rocznik 1982</p>
-<a href="prospekt/">Prospekt 280 S / 280 SE / 280 SEL (wersja polska) →</a>
-</main>
+<header>
+  <h1>Mercedes-Benz 280 S, 280 SE, 280 SEL</h1>
+  <img src="img/title.png" alt="Mercedes-Benz 280 S, 280 SE, 280 SEL." width="1570" height="800">
+</header>
+<section class="intro">
+  <p class="sub">Blog o moim Mercedesie W126 · 280 SE · rocznik 1982</p>
+  <nav>
+    <a href="prospekt/">Prospekt (wersja polska)</a>
+  </nav>
+</section>
+<div class="car"><img src="img/car_line.png" alt="Rysunek W126 z prospektu" width="2270" height="740"></div>
+<footer>Prywatny blog właściciela auta. Nie jest powiązany z Mercedes-Benz AG. Grafika pochodzi z okładki prospektu 280 S / SE / SEL.</footer>
 </body>
 </html>

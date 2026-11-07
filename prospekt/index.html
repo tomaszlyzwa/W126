@@ -77,13 +77,17 @@ body{background:radial-gradient(ellipse at 50% 40%,#3a3d42 0%,#1d1f22 65%,#111 1
 @keyframes pulse{50%{box-shadow:0 0 0 6px rgba(215,184,120,.25)}}
 #pg{min-width:96px;text-align:center;opacity:.85}
 #range{width:min(30vw,260px);accent-color:#b7965a}
-#hint{position:fixed;top:14px;left:50%;transform:translateX(-50%);color:#bbb;font-size:13px;background:rgba(0,0,0,.45);padding:7px 14px;border-radius:16px;transition:opacity 1s;z-index:10;white-space:nowrap}
+#hint{position:fixed;top:54px;left:50%;transform:translateX(-50%);color:#bbb;font-size:13px;background:rgba(0,0,0,.45);padding:7px 14px;border-radius:16px;transition:opacity 1s;z-index:10;white-space:nowrap}
 #loader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:15px;z-index:20;background:#1b1d20;transition:opacity .6s}
+#home{position:fixed;top:0;left:0;right:0;height:46px;display:flex;align-items:center;padding:0 16px;padding-left:max(16px,env(safe-area-inset-left));z-index:12;background:linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,0))}
+#home a{color:#e8e8e8;text-decoration:none;font-size:15px;letter-spacing:.02em;padding:6px 10px;margin-left:-10px;border-radius:18px}
+#home a:hover,#home a:focus-visible{background:rgba(255,255,255,.14);outline:none}
 @media (max-width:600px){#range{display:none}#ui{gap:6px}#ui button{padding:0 11px}}
 </style>
 </head>
 <body>
 <div id="loader">Wczytywanie prospektu…</div>
+<div id="home"><a href="../" title="Wróć do strony głównej bloga">← Strona główna</a></div>
 <div id="stage"><div id="cam"><div id="book"><div id="shadow"></div><div class="edge" id="edgeL"></div><div class="edge" id="edgeR"></div></div></div></div>
 <div id="hint">Dotknij krawędzi strony, przeciągnij lub użyj strzałek ← →</div>
 <div id="ui">
@@ -168,13 +172,13 @@ function slots(){
 }
 function portrait(){return innerWidth/innerHeight<0.95}
 function layout(){
-  const sl=slots(), vw=innerWidth, vh=innerHeight-96;
+  const sl=slots(), TOP=46, BOT=64, vw=innerWidth, vh=innerHeight-TOP-BOT;
   let x0,x1;
   if(portrait()){const f=sl[Math.min(focus,sl.length-1)];x0=f;x1=f+1}
   else{x0=Math.min(...sl);x1=Math.max(...sl)+1}
-  const w=(x1-x0)*PW, sc=Math.min(vw*0.96/w,vh*0.94/PH)*zoom;
+  const w=(x1-x0)*PW, sc=Math.min(vw*0.99/w,vh*0.99/PH)*zoom;
   const cx=(x0+x1)/2*PW;
-  cam.style.transform=`translate(${pan.x}px,${pan.y-34}px) scale(${sc}) translateX(${-cx}px)`;
+  cam.style.transform=`translate(${pan.x}px,${pan.y+(TOP-BOT)/2}px) scale(${sc}) translateX(${-cx}px)`;
   // stack edges & shadow
   const left=cur, right=N-1-cur;
   const eL=document.getElementById('edgeL'),eR=document.getElementById('edgeR');
