@@ -18,16 +18,17 @@ body{
 header{width:min(78vw,760px,60vh);margin-top:clamp(40px,9vh,120px);text-align:center}
 header img{width:100%;height:auto;display:block}
 h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.intro{align-self:flex-end;margin:clamp(20px,4vh,48px) clamp(16px,4vw,64px) 0 16px;text-align:left;max-width:calc(100vw - 32px)}
-nav{margin-top:clamp(10px,1.8vh,18px);display:flex;flex-direction:column;align-items:flex-start;gap:clamp(8px,1.4vh,14px)}
+.intro{align-self:flex-end;font-size:clamp(15px,1.5vw,18px);width:23.7em;margin:clamp(14px,2.5vh,28px) clamp(16px,4vw,64px) 0 16px;text-align:left;max-width:calc(100vw - 32px)}
+nav{margin-top:0;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(8px,1.4vh,14px)}
 nav a{color:#f2f4f7;text-decoration:none;font-size:clamp(15px,1.5vw,18px);letter-spacing:.02em;padding:0;border:0;border-bottom:1px solid transparent;transition:border-color .2s}
 nav a:hover,nav a:focus-visible{border-bottom-color:#f2f4f7;outline:none}
 nav a::after{content:' →'}
-.sub{margin:0;font-size:clamp(15px,1.5vw,18px);opacity:.9;letter-spacing:.02em}
+.sub{margin:clamp(20px,4vh,48px) 16px 0;font-size:clamp(16px,1.7vw,20px);font-style:italic;opacity:.92;letter-spacing:.02em;text-align:center}
 
 .car{margin-top:auto;width:min(96vw,1250px,105vh);padding-top:32px}
 .car img{width:100%;height:auto;display:block}
 footer{width:100%;text-align:center;font:12px/1.5 system-ui,-apple-system,'Segoe UI',sans-serif;color:rgba(242,244,247,.7);padding:14px 16px calc(16px + env(safe-area-inset-bottom))}
+@media (max-width:600px){.sub{font-size:15px}}
 </style>
 </head>
 <body>
@@ -35,8 +36,8 @@ footer{width:100%;text-align:center;font:12px/1.5 system-ui,-apple-system,'Segoe
   <h1>Mercedes-Benz 280 S, 280 SE, 280 SEL</h1>
   <img src="img/title.png" alt="Mercedes-Benz 280 S, 280 SE, 280 SEL." width="1570" height="800">
 </header>
+<p class="sub">Blog o moim Mercedesie W126 · 280 SE · rocznik 1982</p>
 <section class="intro">
-  <p class="sub">Blog o moim Mercedesie W126 · 280 SE · rocznik 1982</p>
   <nav>
     <a href="prospekt/">Prospekt (wersja polska)</a>
     <a href="galeria/">Galeria</a>
