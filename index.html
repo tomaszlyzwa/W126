@@ -19,7 +19,7 @@ header{width:min(78vw,760px,60vh);margin-top:clamp(40px,9vh,120px);text-align:ce
 header img{width:100%;height:auto;display:block}
 h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .intro{align-self:flex-end;margin:clamp(20px,4vh,48px) clamp(16px,4vw,64px) 0 16px;text-align:left;max-width:calc(100vw - 32px)}
-nav{margin-top:clamp(10px,1.8vh,18px);display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-start}
+nav{margin-top:clamp(10px,1.8vh,18px);display:flex;flex-direction:column;align-items:flex-start;gap:clamp(8px,1.4vh,14px)}
 nav a{color:#f2f4f7;text-decoration:none;font-size:clamp(15px,1.5vw,18px);letter-spacing:.02em;padding:0;border:0;border-bottom:1px solid transparent;transition:border-color .2s}
 nav a:hover,nav a:focus-visible{border-bottom-color:#f2f4f7;outline:none}
 nav a::after{content:' →'}
@@ -39,6 +39,7 @@ footer{width:100%;text-align:center;font:12px/1.5 system-ui,-apple-system,'Segoe
   <p class="sub">Blog o moim Mercedesie W126 · 280 SE · rocznik 1982</p>
   <nav>
     <a href="prospekt/">Prospekt (wersja polska)</a>
+    <a href="galeria/">Galeria</a>
   </nav>
 </section>
 <div class="car"><img src="img/car_line.png" alt="Rysunek W126 z prospektu" width="2270" height="740"></div>
