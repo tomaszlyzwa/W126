@@ -11,9 +11,8 @@ Blog o Mercedesie W126 280 SE (1982). Statyczna strona na GitHub Pages, bez serw
 | `specyfikacja/index.html` | `https://tomaszlyzwa.github.io/W126/specyfikacja/` — metryka egzemplarza (VIN, karta produkcyjna, kody) |
 | `galeria/index.html` | `https://tomaszlyzwa.github.io/W126/galeria/` — galeria zdjęć |
 | `galeria/zdjecia/` | tu wrzucasz zdjęcia (JPG/PNG/WEBP) |
-| `galeria/zdjecia.json` | lista zdjęć; odświeża ją automat GitHub Actions |
-| `galeria-workflow.yml` | automat do listy zdjęć — przenieś go do `.github/workflows/galeria.yml` w repozytorium |
-| `img/` | grafiki strony głównej (WebP) |
+| `galeria/zdjecia.json` | lista zdjęć; odświeża ją automat `.github/workflows/galeria.yml` |
+| `img/` | grafiki strony (WebP), ikony i obrazek podglądu linku `og-image.jpg` |
 | `.nojekyll` | wyłącza Jekyll na GitHub Pages |
 
 Galeria czyta najpierw `zdjecia.json`. Gdy lista jest pusta, awaryjnie pyta publiczne API GitHuba.
